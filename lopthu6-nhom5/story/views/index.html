@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="commiconline">
+
+<head>
+	<meta charset="UTF-8" />
+    <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.6.6" data-semver="1.6.6" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script src="../app/script.js"></script>
+	<script src="../app/controllers/commicList.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.4.9/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.9/angular-resource.min.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><b>CommicOnline</b></a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#">Cổ tích Việt Nam</a>
+				</li>
+				<li>
+					<a href="#">Cổ tích thế giới</a>
+				</li>
+				<li>
+					<a href="#">Truyện dân gian</a>
+				</li>
+				<li>
+					<a href="#">Truyện truyện ngụ ngôn</a>
+				</li>
+				<li>
+					<a href="#">Truyện cười</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-left" action="">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Tìm kiếm" />
+				</div>
+				<button type="submit" class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 100px">
+		<div ng-view></div>
+	</div>
+	
+</body>
+</html>

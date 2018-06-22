@@ -1,0 +1,11 @@
+Phân công công việc của nhóm 5 - lớp thứ 6
+Project:Web đọc truyện 
+*Nguyễn Thanh Tùng : 
+-Thiết kế cơ sở Dữ liệu 
+-Viết API bằng nodeJS
+-viết điều hướng cho Project
+-tìm hiểu làm chức năng đăng nhập sử dụng Passport
+*Nguyễn Đình Hoàng
+-Làm giao diện web bằng Angular
+-Làm các chức năng đọc truyện,vote star,...
+-Làm điều hướng cho Project

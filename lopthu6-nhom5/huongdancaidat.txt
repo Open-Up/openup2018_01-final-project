@@ -1,0 +1,6 @@
+Hướng dẫn cài đặt:
+-Copy thư mục story vào htdocs của Xampp
+-Import cơ sở dữ liệu từ file storyDB.sql trong thư mục Database
+-sử dụng terminal cd vào thư mục story trong htdocs,rồi chạy câu lệnh:
+node index.js để khởi động server
+-Vào trình duyệt mở web bằng link : http://localhost:5000

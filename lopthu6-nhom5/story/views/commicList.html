@@ -1,0 +1,34 @@
+<hr>
+<div class="row">
+	<div ng-repeat="n in [].constructor($ctrl.commic.length) track by $index" class="col-md-8">
+		<div  ng-show="$index%3==0">
+			<div class="col-md-4">
+				<article>
+					<a href="#/story/{{$ctrl.commic[$index].storyid}}">
+						<img width="220px" height="284px" src="{{$ctrl.commic[$index].image}}">
+						<caption>{{$ctrl.commic[$index].title}}</caption>
+					</a>
+				</article>
+			</div>
+			<div class="col-md-4" ng-show="($index+1)<($ctrl.commic.length)">
+				<article>
+					<a href="#/story/{{$ctrl.commic[$index+1].storyid}}">
+						<img width="220px" height="284px" src="{{$ctrl.commic[$index+1].image}}">
+						<caption>{{$ctrl.commic[$index+1].title}}</caption>
+					</a>
+				</article>
+			</div>
+			<div class="col-md-4" ng-show="($index+2)<$ctrl.commic.length">
+				<article>
+					<a href="#/story/{{$ctrl.commic[$index+2].storyid}}">
+						<img width="220px" height="284px" src="{{$ctrl.commic[$index+2].image}}">
+						<caption>{{$ctrl.commic[$index+2].title}}</caption>
+					</a>
+				</article>
+			</div>
+			<div class="col-md-12">
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
