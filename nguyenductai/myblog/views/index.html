@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/fonts/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+  </head>
+
+  <body ng-app="app" class="container bg-info">
+    <h1 class="text-center">
+      <label>Jackie's Blog</label>
+    </h1>
+    <div class="panel">
+      <slider-layout></slider-layout>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <post-layout></post-layout>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <log-in-layout></log-in-layout>
+        </div>
+        <div>
+          <log-out-layout></log-out-layout>
+        </div>
+        <div>
+          <author-layout></author-layout>
+        </div>
+        <!-- <div>
+          <contact-layout></contact-layout>
+        </div> -->
+      </div>
+    </div>
+  </body>
+
+</html>

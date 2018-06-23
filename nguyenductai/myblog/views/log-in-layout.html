@@ -1,0 +1,8 @@
+<div class="panel" ng-show="!loginCtrl.isLogIn">
+	<h3 class="panel text-center"><label>Log In</label></h3>
+	<form class="container-fluid" name="logInForm" ng-submit="logInForm.$valid&&loginCtrl.login(account)">
+		<input name="email" class="form-control" type="email" placeholder="name" ng-model="account.email" required/><br/>
+		<input name="password" class="form-control" type="password" placeholder="password" ng-model="account.password" required/><br/>
+    <button class="btn btn-primary form-control" type="submit">Log In</button><br/><br/>
+	</form>
+</div>

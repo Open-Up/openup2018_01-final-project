@@ -1,0 +1,23 @@
+<div log-in class="panel">
+	<h3 class="panel text-center"><label>Posts</label></h3>
+	<div>
+		<form  ng-show="loginCtrl.isLogIn" name="formPost" class="panel container-fluid" ng-submit="postCtrl.posting(post)">
+			<div class="row">
+				<div class="col-sm-4">
+					<img alt="image">
+				</div>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" placeholder="Title" ng-model="post.title" required/><br/>
+					<textarea class="form-control" type="text" placeholder="Content" ng-model="post.content" required></textarea><br/>
+				</div>
+			</div>
+			<button class="btn btn-primary pull-right">Post</button><br/><br/>
+		</form>
+		<div ng-show="!loginCtrl.isLogIn" ng-repeat="post in postCtrl.posts">
+			<post-detail post='post'></post-detail>
+		</div>
+		<div ng-show="loginCtrl.isLogIn" ng-repeat="pst in postCtrl.posts">
+			<post-detail-log-in post='pst' delete-post='postCtrl.deletePost(pst)'></post-detail-log-in>
+		</div>
+	</div>
+</div>
