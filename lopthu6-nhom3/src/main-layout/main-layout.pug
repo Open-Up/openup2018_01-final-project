@@ -1,0 +1,11 @@
+section(layout="row" flex)
+  md-sidenav(
+    class="md-sidenav-left", md-component-id="closeEventsDisabled",
+    md-whiteframe="4")
+  md-nav-bar(
+      md-no-ink-bar="disableInkBar",
+      md-selected-nav-item="currentNavItem",
+      nav-bar-aria-label="navigation links")
+    md-nav-bar-item(name="Home", path="/")
+    md-nav-bar-item(name="Statistic", path="/statistic")
+  ng-transclude

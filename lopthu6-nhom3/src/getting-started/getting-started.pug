@@ -1,0 +1,11 @@
+ul.items
+  li.item(ng-repeat="item in listItems() track by $index", toggle="true")
+    | {{item}}
+
+div(layout="row", layout-align="space-around center")
+  p-input(
+    p-label="New Item Here!", p-model="newItem",
+    p-keydown="handleInput($event)", flex-gt)
+  md-button.md-raised.md-primary(ng-click="add()") Add
+
+p-fab(p-click="next()", p-icon="icon-home")

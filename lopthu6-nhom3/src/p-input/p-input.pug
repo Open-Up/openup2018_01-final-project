@@ -1,0 +1,6 @@
+md-input-container
+  label {{$ctrl.pLabel}}
+  input(
+    type="text", ng-model="$ctrl.pModel",
+    ng-keydown="$ctrl.pKeydown({$event})", pattern="{{$ctrl.pPattern}}",
+    placeholder="{{$ctrl.pPlaceholder}}")
