@@ -1,0 +1,47 @@
+<section>
+    <ul class="nav nav-pills">
+        <li ng-class="{ active: $ctrl.isSelected(1) }">
+            <a ng-click="$ctrl.selectTab(1)">Description</a>
+        </li>
+        <li ng-class="{ active: $ctrl.isSelected(2) }">
+            <a ng-click="$ctrl.selectTab(2)">Notes</a>
+        </li>
+        <li ng-class="{ active: $ctrl.isSelected(3) }">
+            <a ng-click="$ctrl.selectTab(3)">Reviews</a>
+        </li>
+    </ul>
+
+    <div class="panel" ng-show="$ctrl.isSelected(1)" style="padding: 15px">
+        <h4>Description</h4>
+        <blockquote>{{product.NoiDung}}</blockquote>
+    </div>
+    <div class="panel" ng-show="$ctrl.isSelected(2)" style="padding: 15px">
+        <h4>Notes</h4>
+        <blockquote>{{product.Chu_Y}}</blockquote>
+    </div>
+    <div class="panel" ng-show="$ctrl.isSelected(3)" style="padding: 15px">
+        <h4>New review</h4>
+        <form name="reviewForm" ng-controller="ReviewController" ng-submit="addReview(product)" novalidate>
+
+            <textarea name="NoiDung" required ng-model="review.NoiDung" placeholder="Write message..."></textarea>
+            <input name="ten_user" required ng-model="review.ten_user" placeholder="Nhập ten_user..." />
+            <button class="btn btn-primary" type="submit" ng-disabled="!reviewForm.$valid">Send</button>
+
+
+
+        </form>
+
+        <h4>Reviews</h4>
+        <div ng-controller="StoreController as store">
+            <blockquote ng-repeat='comment in store.listComment' ng-if="comment.id_MonAn == product.id">
+
+                <b>Cmt: {{comment.ten_user}}</b>
+                <br> {{comment.NoiDung}}
+                <br>
+                <cite>At: {{comment.created_at}}</cite>
+
+
+            </blockquote>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+<section id="ourPakeg" class="ourPakeg" ng-controller="StoreController as store">
+    <div class="container">
+      <div class="main_pakeg_content wow fadeIn" data-wow-duration="3s">
+        <div class="row">
+          <div class="head_title text-center">
+            <h4>Thông tin món ăn</h4>
+          </div>
+  
+          <div class="col-md-6 single_pakeg_text text-center" style="background: transparent">
+            <br>
+            <br>
+            <br>
+            <div align="center"  >
+              <product-gallery images="store.products[menu.getIndex()].Hinh"></product-gallery>
+              <product-title prdct="store.products[menu.getIndex()]"></product-title>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <div class="single_pakeg_text" style="background: transparent">
+              <div align="center">
+                <h4 style="color: white">Mô tả</h4>
+              </div>
+              <h3 style="font-size: 1.875rem;
+              font-family: 'Pacifico', cursive; color: white">{{store.products[menu.getIndex()].TomTat}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

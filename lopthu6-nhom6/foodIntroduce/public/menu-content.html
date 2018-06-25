@@ -1,0 +1,72 @@
+<hr>
+<section id="ourPakeg" class="ourPakeg" ng-controller="StoreController as store">
+  <div class="container">
+    <div class="main_pakeg_content wow fadeIn" data-wow-duration="3s">
+      <div class="row">
+        <div class="head_title text-center">
+          <h4>Thông tin món ăn</h4>
+        </div>
+
+        <div class="col-md-6 single_pakeg_text text-center" style="padding: 0px; border: 5px solid lawngreen;border-radius: 25px;">
+          <br>
+          <br>
+          <br>
+          <div align="center">
+            <!-- <product-gallery images="store.products[menu.getIndex()].Hinh"></product-gallery> -->
+            <img src="upload/monan/{{store.products[menu.getIndex()].Hinh}}" style="width: 100%;height: 100%; ">
+            <!-- <product-title prdct="store.products[menu.getIndex()]"></product-title> -->
+            <h6 style="font-size: 1.875rem; font-family: 'Pacifico', cursive; color: black">{{store.products[menu.getIndex()].TenMon}}</h6>
+            <p class="product_price" style="font-size: 1.875rem; font-family: 'Pacifico', cursive; color: black">{{store.products[menu.getIndex()].SoLuotXem}}
+              <img src="upload/like.jpg" align="center" style="width: 20px; height: 20px;">
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="single_pakeg_text" style="background: transparent">
+            <div align="center">
+              <h4 style="color: white; font-size:2em">Mô tả</h4>
+
+            </div>
+            <hr>
+            <h3 style="font-size: 1.875rem;
+            font-family: 'Pacifico', cursive; color: white">{{store.products[menu.getIndex()].TomTat}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <product-panels product="store.products[menu.getIndex()]"></product-panels>
+  </div>
+  
+    
+  
+</section>
+<hr>
+<section id="portfolio" class="portfolio" ng-controller="StoreController as store">
+  <div class="container">
+    <div class="row">
+      <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="3s">
+        <div class="col-md-12">
+          <div class="head_title text-center">
+            <h4>Thực đơn</h4>
+    
+            <div class="example1">
+              <h3 style="font-family: 'Pacifico', cursive; color: white">Cùng trải nghiệm những món ăn HOT không thể bỏ lỡ</h3>
+             </div>
+           
+          </div>
+          <div class="main_portfolio_content">
+            <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text" ng-repeat='product in store.products' style="padding: 10px; border: 2px solid gray;border-radius: 25px;">
+              <product-gallery images="product.Hinh"></product-gallery>
+              <div class="portfolio_images_overlay text-center">
+                <product-title prdct="product"></product-title>
+                <a href="#ourPakeg" class="btn btn-primary" ng-click="menu.selectedProduct($index)"> Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
