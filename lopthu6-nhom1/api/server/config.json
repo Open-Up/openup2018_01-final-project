@@ -1,0 +1,13 @@
+{
+    "development": {
+        "restApiRoot": "/api",
+        "host": "localhost",
+        "port": "27017",
+        "database": "phantan",
+        "username": "",
+        "password": ""
+    },
+    "production": {},
+    "email_admin":""
+}
+
