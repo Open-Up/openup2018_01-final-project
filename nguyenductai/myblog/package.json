@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "final exam",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Jackie",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^5.0.6",
+    "consolidate": "^0.15.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "swig": "^1.4.2"
+  },
+  "bin": {
+    "blog": "www.js"
+  },
+  "devDependencies": {}
+}

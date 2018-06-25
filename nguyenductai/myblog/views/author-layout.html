@@ -1,0 +1,56 @@
+<div class="panel">
+	<h3 class="text-center panel"><label>Author</label></h3>
+	<div ng-show="authCtrl.show||(!loginCtrl.isLogIn)" class="container-fluid">
+		<p>
+			<label>Name:</label> {{authCtrl.author.name}}</p>
+		<p>
+			<label>Birthday:</label> {{authCtrl.author.birthday | date:"MM/dd/yyyy"}}</p>
+		<p>
+			<label>Live in:</label> {{authCtrl.author.live}}</p>
+		<p>
+			<label>From:</label> {{authCtrl.author.home}}</p>
+		<p>
+			<label>Studies at:</label> {{authCtrl.author.school}}</p>
+		<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+			<ul class="nav navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" ng-href="{{authCtrl.author.facebook}}">
+						<h3><i class='fab fa-facebook'></i></h3>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" ng-href="{{authCtrl.author.github}}">
+						<h3><i class='fab fa-github'></i></h3>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" ng-href="{{authCtrl.author.googleplus}}">
+						<h3><i class='fab fa-google-plus'></i></h3>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<button log-in class="btn btn-primary form-control" ng-show="loginCtrl.isLogIn" ng-click="authCtrl.setshow(false)">edit</button><br/><br/>
+	</div>
+	<form name="authForm" ng-show="loginCtrl.isLogIn && (!authCtrl.show)" class="container-fluid">
+		<input class="form-control" type="text" ng-model="author.name" placeholder="Name" required/><br/>
+		<div class="input-group">
+			<span class="input-group-addon" id="birthday">Birthday</span>
+			<input type="date" class="form-control" aria-describedby="birthday" ng-model="author.birthday" required>
+		</div><br/>
+		<input class="form-control" type="text" ng-model="author.live" placeholder="Live in" required/><br/>
+		<input class="form-control" type="text" ng-model="author.home" placeholder="From" required/><br/>
+		<input class="form-control" type="" ng-model="author.school" placeholder="School" required/><br/>
+		<input class="form-control" type="" ng-model="author.facebook" placeholder="Facebook" required/><br/>
+		<input class="form-control" type="" ng-model="author.github" placeholder="Github" required/><br/>
+		<input class="form-control" type="" ng-model="author.googleplus" placeholder="Google plus" required/><br/>
+		<div class="row">
+			<div class="col-sm-6">
+				<button class="btn btn-primary form-control" ng-click="(authForm.$valid)&&authCtrl.updateInfo(author)">Submit</button>
+			</div>
+			<div class="col-sm-6">
+				<button class="btn btn-primary form-control" ng-click="authCtrl.setshow(true)">Exit</button>
+			</div>
+		</div><br/>
+	</form>
+</div>
