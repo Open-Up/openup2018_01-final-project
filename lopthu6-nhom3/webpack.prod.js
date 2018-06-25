@@ -1,0 +1,87 @@
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+console.log(path.resolve(__dirname, './src'))
+
+/** @type {webpack.Configuration} */
+const config = {
+  entry: path.resolve(__dirname, 'src/index.js'),
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index.js'
+  },
+  context: __dirname,
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: 'url-loader?limit=100000'
+      }
+    ]
+  },
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'app')
+    ],
+    extensions: [
+      '.js',
+      '.css',
+      '.styl',
+      '.stylus',
+      '.pug',
+      '.oet',
+      '.svg',
+      '.tff',
+      '.woff',
+      '.woff2'
+    ]
+  },
+  mode: 'production',
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: '!!pug-loader!./src/index.pug',
+      inject: 'head'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
+    })
+  ]
+}
+
+module.exports = config

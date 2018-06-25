@@ -1,0 +1,4 @@
+md-input-container
+  label {{$ctrl.pLabel}}
+  md-select(ng-model="$ctrl.pModel", placeholder="None")
+    md-option(ng-repeat="item in $ctrl.pItems", ng-value="item") {{item}}

@@ -1,0 +1,13 @@
+md-toolbar(class="md-hue-2")
+  md-button(class="md-icon-button", aria-label="Menu" ng-click="back()")
+    md-icon(md-font-icon="icon-menu", ng-style="{ color: white }")
+
+md-content(layout-padding, layout="column")
+  md-card: md-card-actions
+    div: p-input(
+      p-model="price", p-type="number",
+      p-pattern="[0-9]+", p-placeholder="0")
+    div: p-select(
+      p-model="selectedItem", p-items="items",
+      p-label="Items")
+    p-button(p-click="add()") Add
