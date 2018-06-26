@@ -1,0 +1,48 @@
+link(rel="stylesheet", href="/style/index.css")
+
+script(src="http://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.6/wavesurfer.min.js")
+script(src="https://unpkg.com/axios/dist/axios.min.js")
+script(src="https://www.youtube.com/iframe_api")
+
+script(src="/js/recorder.js")
+script(src="/js/recorderWorker.js")
+script(src="/js/main.js")
+        
+iframe#player(frameborder="0",
+              allowfullscreen="0",
+              title="YouTube video player",
+              width="640", height="360",
+              src="https://www.youtube.com/embed/yvkQ42MrDhI?playsinline=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;controls=2&amp;fs=0&amp;enablejsapi=1&amp;widgetid=1")
+canvas#analyser(width="640",height="200")
+div#score ---
+div#pseudo-wave-surfer
+
+script.
+    var wavesurfer = WaveSurfer.create({
+          container: '#pseudo-wave-surfer'
+    });
+
+    wavesurfer.on('ready', function () {
+        dataFromDB = wavesurfer.backend.buffer.getChannelData(0);
+    });
+
+    wavesurfer.load('/audios/faded.mp4');
+
+script.
+    function onYouTubeIframeAPIReady() {
+        var player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: 'yvkQ42MrDhI',
+            events: {
+            'onStateChange': function(event) {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    toggleRecording(true);
+                }
+                if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                    toggleRecording(false)
+                }
+            }
+            }
+        });
+    }
