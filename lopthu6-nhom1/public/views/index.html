@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="course">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Con Nhà Người Ta</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	/>
+	<script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script data-require="angular.js@1.6.6" data-semver="1.6.6" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+
+	<script type="text/javascript" src="../js/app/controllers/script.js"></script>
+
+</head>
+
+<body>
+	<div ng-controller="MainController">
+
+
+
+		<!-- Header -->
+		<header id="home">
+			<!-- Background Image -->
+			<div class="bg-img" style="background-image: url('./img/background1.png');">
+				<div class="overlay"></div>
+			</div>
+			<!-- /Background Image -->
+
+			<!-- Nav -->
+			<nav id="nav" class="navbar nav-transparent">
+				<div class="container">
+
+					<div class="navbar-header">
+						<!-- Logo -->
+						<div class="navbar-brand">
+							<a href="index.html">
+								<img class="logo" src="img/logo.png" alt="logo">
+								<img class="logo-alt" src="img/logo.png" alt="logo">
+							</a>
+						</div>
+						<!-- /Logo -->
+
+						<!-- Collapse nav button -->
+						<div class="nav-collapse">
+							<span></span>
+						</div>
+						<!-- /Collapse nav button -->
+					</div>
+
+					<!--  Main navigation  -->
+					<ul class="main-nav nav navbar-nav navbar-right">
+						<li>
+							<a href="" ng-click="clickTo('#home')">Trang chủ</a>
+						</li>
+						<li>
+							<a href="" ng-click="clickTo('#about')">Giới thiệu</a>
+						</li>
+						<li>
+							<a href="" ng-click="clickTo('#course')">Khóa học</a>
+						</li>
+						<li>
+							<a href="" ng-click="clickTo('#numbers')">Thành tích</a>
+						</li>
+						<li>
+							<a href="" ng-click="clickTo('#teacher')">Đội ngũ</a>
+						</li>
+						<li>
+							<a href="" ng-click="clickTo('#contact')">Liên hệ</a>
+						</li>
+					</ul>
+					<!-- /Main navigation -->
+
+				</div>
+			</nav>
+			<!-- /Nav -->
+
+			<!-- home wrapper -->
+			<div class="home-wrapper">
+				<div class="container">
+					<div class="row">
+
+						<!-- home content -->
+						<div class="col-md-10 col-md-offset-1">
+							<div class="home-content">
+								<h1 class="white-text">Trung tâm học thêm ConNhaNguoiTa</h1>
+								<p class="white-text">
+									Đảm bảo đầu ra được như con nhà người ta.
+								</p>
+								<!-- <button class="white-btn">Get Started!</button> -->
+								<button class="main-btn" ng-click="clickTo('#about')">Tìm hiểu thêm</button>
+							</div>
+						</div>
+						<!-- /home content -->
+
+					</div>
+				</div>
+			</div>
+			<!-- /home wrapper -->
+
+		</header>
+		<!-- /Header -->
+
+		<!-- About -->
+		<div id="about" class="section md-padding">
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+					<!-- Section header -->
+					<div class="section-header text-center">
+						<h2 class="title">Chào mừng đến với ConNhaNguoiTa</h2>
+					</div>
+					<!-- /Section header -->
+
+					<!-- about -->
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-map-marker"></i>
+							<h3>Vị trí đẹp</h3>
+							<p>Tọa lạc tại Cầu Giấy, gần với nhiều trường trung học như Yên Hòa, Cầu Giấy, Nguyễn Tất Thành, Chuyên Sư phạm. Thuận
+								tiện cho việc đi lại. Giảm bớt mệt mỏi sau những giờ học vất vả.</p>
+							<a ng-href="#contact">Read more</a>
+						</div>
+					</div>
+					<!-- /about -->
+
+					<!-- about -->
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-magic"></i>
+							<h3>Đội ngũ giáo viên chất lượng</h3>
+							<p>Đội ngũ giáo viên bao gồm các giáo sư, tiến sĩ của các trường Đại học danh tiếng, đều đang giảng dạy ở các trường
+								được coi là hot, top, đẳng cấp. Tất cả thầy cô đều tận tâm với nghề, tận tình với trò, tận lực với cuộc chơi.</p>
+							<a ng-href="#teacher">Read more</a>
+						</div>
+					</div>
+					<!-- /about -->
+
+					<!-- about -->
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-mortar-board"></i>
+							<h3>Đẳng cấp đầu ra</h3>
+							<p>Kết quả đầu ra luôn ở mức con nhà người ta. Được bạn bè và phụ huynh cùng lớp ngưỡng mộ. Dù theo học ở ngôi trường
+								nào đi chăng nữa, các học sinh ở trung tâm ConNhaNguoiTa luôn được coi là điểm sáng tại trường mà các em theo học.</p>
+							<a ng-click="clickTo('#numbers')">Read more</a>
+						</div>
+					</div>
+					<!-- /about -->
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</div>
+		<!-- /About -->
+
+		<!-- Courses -->
+
+		<div id="course" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Khóa học</h2>
+						<p class="lead">Các khóa học từ mẫu giáo đến qua cả lớp 12</p>
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- courses -->
+				<div id="courses-wrapper">
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[0].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title">{{courses[0].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[0].teacher}}</h4>
+									<span class="course-category">{{courses[0].subject}}</span>
+									<span class="course-price course-free">{{courses[0].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[1].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[1].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[1].teacher}}</h4>
+									<span class="course-category">{{courses[1].subject}}</span>
+									<span class="course-price course-premium">{{courses[1].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[2].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[2].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[2].teacher}}</h4>
+									<span class="course-category">{{courses[2].subject}}</span>
+									<span class="course-price course-premium">{{courses[2].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[3].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[3].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[3].teacher}}</h4>
+									<span class="course-category">{{courses[3].subject}}</span>
+									<span class="course-price course-free">{{courses[3].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[4].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[4].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[4].teacher}}</h4>
+									<span class="course-category">{{courses[4].subject}}</span>
+									<span class="course-price course-free">{{courses[4].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[5].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[5].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[5].teacher}}</h4>
+									<span class="course-category">{{courses[5].subject}}</span>
+									<span class="course-price course-free">{{courses[5].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[6].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+									<a class="course-title" href="#">{{courses[6].course_name}}</a>
+									<div class="course-details">
+										<h4>Giáo viên: {{courses[6].teacher}}</h4>
+										<span class="course-category">{{courses[6].subject}}</span>
+										<span class="course-price course-free">{{courses[6].date_public}}</span>
+									</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="#" class="course-img">
+									<img src="{{courses[7].image}}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">{{courses[7].course_name}}</a>
+								<div class="course-details">
+									<h4>Giáo viên: {{courses[7].teacher}}</h4>
+									<span class="course-category">{{courses[7].subject}}</span>
+									<span class="course-price course-free">{{courses[7].date_public}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+				</div>
+				<!-- /courses -->
+
+				<div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="#">Xem thêm</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- container -->
+
+		</div>
+
+
+
+
+		<!-- Numbers -->
+		<div id="numbers" class="section sm-padding">
+
+			<!-- Background Image -->
+			<div class="bg-img" style="background-image: url('./img/background2.jpg');">
+				<div class="overlay"></div>
+			</div>
+			<!-- /Background Image -->
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+					<!-- number -->
+					<div class="col-sm-3 col-xs-6" ng-repeat="number in numbers">
+						<div class="number">
+							<i class="{{number.icon}}"></i>
+							<h3 class="white-text">
+								<span class="counter">{{number.result_amount}}</span>
+							</h3>
+							<span class="white-text">{{number.result_name}}</span>
+						</div>
+					</div>
+					<!-- /number -->
+
+
+					<!-- /number -->
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</div>
+		<!-- /Numbers -->
+
+
+		<!-- Testimonial -->
+		<div id="testimonial" class="section md-padding">
+
+			<!-- Background Image -->
+			<div class="bg-img" style="background-image: url('./img/background3.jpg');">
+				<div class="overlay"></div>
+			</div>
+			<!-- /Background Image -->
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+
+
+					<!-- Testimonial slider -->
+					<div class="col-md-10 col-md-offset-1">
+						<div id="testimonial-slider" class="owl-carousel owl-theme">
+
+							<!-- testimonial -->
+							<div id="{{$index}}" class="testimonial">
+								<div class="testimonial-meta">
+									<img src="{{reviews[0].img}}" alt="">
+									<h3 class="white-text">{{reviews[0].fullname}}</h3>
+									<span>{{reviews[0].gender}} {{reviews[0].born_year}}</span>
+								</div>
+								<p class="white-text">{{reviews[0].review}}</p>
+							</div>
+							<div id="{{$index}}" class="testimonial">
+								<div class="testimonial-meta">
+									<img src="{{reviews[1].img}}" alt="">
+									<h3 class="white-text">{{reviews[1].fullname}}</h3>
+									<span>{{reviews[1].gender}} {{reviews[1].born_year}}</span>
+								</div>
+								<p class="white-text">{{reviews[1].review}}</p>
+							</div>
+							<div id="{{$index}}" class="testimonial">
+								<div class="testimonial-meta">
+									<img src="{{reviews[2].img}}" alt="">
+									<h3 class="white-text">{{reviews[2].fullname}}</h3>
+									<span>{{reviews[2].gender}} {{reviews[2].born_year}}</span>
+								</div>
+								<p class="white-text">{{reviews[2].review}}</p>
+							</div>
+
+
+							<!-- /testimonial -->
+						</div>
+					</div>
+					<!-- /Testimonial slider -->
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</div>
+		<!-- /Testimonial -->
+
+		<!-- teacher -->
+		<div id="teacher" class="section md-padding">
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+					<!-- Section header -->
+					<div class="section-header text-center">
+						<h2 class="title">Đội ngũ giáo viên</h2>
+					</div>
+					<!-- /Section header -->
+
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive" src="./img/team1.jpg" alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="#">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-google-plus"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="team-content">
+								<h3>Trường Nghiêm</h3>
+								<span>Toán học</span>
+							</div>
+						</div>
+					</div>
+					<!-- /team -->
+
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive" src="./img/team2.jpg" alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="#">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-google-plus"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="team-content">
+								<h3>Đức Tuấn</h3>
+								<span>Vật lý</span>
+							</div>
+						</div>
+					</div>
+					<!-- /team -->
+
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive" src="./img/team3.jpg" alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="#">
+											<i class="fa fa-facebook"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-google-plus"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="team-content">
+								<h3>Ngọc Toản</h3>
+								<span>Hóa học</span>
+							</div>
+						</div>
+					</div>
+					<!-- /team -->
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</div>
+		<!-- /Team -->
+
+		<!-- Contact -->
+		<div id="contact" class="section md-padding">
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+					<!-- Section-header -->
+					<div class="section-header text-center">
+						<h2 class="title">Thông tin liên hệ</h2>
+					</div>
+					<!-- /Section-header -->
+
+					<!-- contact -->
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-phone"></i>
+							<h3>Điện thoại</h3>
+							<p>01635751427</p>
+						</div>
+					</div>
+					<!-- /contact -->
+
+					<!-- contact -->
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-envelope"></i>
+							<h3>Email</h3>
+							<p>trinhcu18@gmail.com</p>
+						</div>
+					</div>
+					<!-- /contact -->
+
+					<!-- contact -->
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-map-marker"></i>
+							<h3>Địa chỉ</h3>
+							<p>Số 69, ngõ 260, đường Cầu Giấy, Q.Cầu Giấy, Hà Nội</p>
+						</div>
+					</div>
+					<!-- /contact -->
+
+					<!-- contact form -->
+					<div class="col-md-8 col-md-offset-2">
+						<form class="contact-form">
+							<input type="text" class="input" placeholder="Name">
+							<input type="email" class="input" placeholder="Email">
+							<input type="text" class="input" placeholder="Subject">
+							<textarea class="input" placeholder="Message"></textarea>
+							<button class="main-btn">Send message</button>
+						</form>
+					</div>
+					<!-- /contact form -->
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</div>
+		<!-- /Contact -->
+
+
+		<!-- Footer -->
+		<footer id="footer" class="sm-padding bg-dark">
+
+			<!-- Container -->
+			<div class="container">
+
+				<!-- Row -->
+				<div class="row">
+
+					<div class="col-md-12">
+
+						<!-- footer logo -->
+						<div class="footer-logo">
+							<a href="index.html">
+								<img src="img/logo.png" alt="logo">
+							</a>
+						</div>
+						<!-- /footer logo -->
+
+						<!-- footer follow -->
+						<ul class="footer-follow">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-youtube"></i>
+								</a>
+							</li>
+						</ul>
+						<!-- /footer follow -->
+
+						<!-- footer copyright -->
+						<div class="footer-copyright">
+							<p>Copyright © 2018. All Rights Reserved. Designed by
+								<a href="https://fb.com/trinhnd96" target="_blank">Nguyen Duc Trinh</a>
+							</p>
+						</div>
+						<!-- /footer copyright -->
+
+					</div>
+
+				</div>
+				<!-- /Row -->
+
+			</div>
+			<!-- /Container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- Back to top -->
+		<div id="back-to-top"></div>
+		<!-- /Back to top -->
+
+		<!-- Preloader -->
+		<div id="preloader">
+			<div class="preloader">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- /Preloader -->
+	</div>
+	<!-- jQuery Plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
