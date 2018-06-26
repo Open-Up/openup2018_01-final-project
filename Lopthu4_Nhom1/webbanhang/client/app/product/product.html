@@ -1,0 +1,53 @@
+<menu-directive></menu-directive>
+<div id="breadcrumb">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li class="active">Products</li>
+        </ul>
+    </div>
+</div>
+<!-- /BREADCRUMB -->
+
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- ASIDE -->
+            <aside-directive></aside-directive>
+            <!-- /ASIDE -->
+
+            <!-- MAIN -->
+            <div id="main" class="col-md-9">
+                <!-- store top filter -->
+                <filter-directive></filter-directive>
+                <!-- /store top filter -->
+
+                <!-- STORE -->
+                <div id="store">
+                    <!-- row -->
+                    <div class="row">
+                        <div ng-repeat="product in listProduct">
+                            <productsingle-directive product="product"></productsingle-directive>
+                        </div>
+                        <!-- Product Single -->
+                        <!-- /Product Single -->
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /STORE -->
+
+                <!-- store bottom filter -->
+                <filter-directive></filter-directive>
+                <!-- /store bottom filter -->
+            </div>
+            <!-- /MAIN -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
